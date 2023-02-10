@@ -1,0 +1,107 @@
+//*===== banner area start ====*//
+.banner{
+    // .banner-left{
+    //     .header-content{
+    //         h3{
+    //             font-size: $fs-header;
+    //             color: $title-color;
+    //             font-weight: bold;
+    //             width: 100%;
+    //             line-height: 39px;
+    //             margin: 20px 0;
+    //             @include breakpoint(md){
+    //                 width: 80%;   
+    //             }
+    //         }
+    //     }
+    //     .banner-content{
+    //         p{
+    //             color: $fs-body;
+    //             color: $content-color;
+    //             margin: 5px 0 20px 0;
+    //             a{
+    //                 color: $theme-color;
+    //             }
+    //         }
+    //     }
+    //     .banner-button{
+    //         margin: 20px 0;
+    //     }
+    // }
+    transition: all 0.2s ease-in-out;
+    .swiper{
+        .swiper-slide{
+            img{
+                max-height: 80vh;
+                width: 100%;
+            }
+            .benner-content{
+                position: absolute;
+                bottom: 20px;
+                background: white;
+                color: $content-color;
+                width: 60%;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                padding: 20px 10px;
+                border-radius: 20px;
+                text-align: center;
+                font-weight: 1000;
+                p {
+                        display: none;
+                
+                        @include breakpoint(sm) {
+                            display: block;
+                        }
+                    }
+            }
+        }
+    }
+}
+
+.shop-banner{
+    transition: $them-transition;
+    .swiper {
+            .swiper-slide {
+                img {
+                    max-height: 587px;
+                    width: 100%;
+                }    
+                .benner-content {
+                    position: absolute;
+                    top: 45%;
+                    left: 70px;
+                    background: transparent;
+                    color: black;
+                    max-width: 380px;
+                    word-wrap: break-word;
+                    // left: 0;
+                    // right: 0;
+                    // margin: 0 auto;
+                    padding: 20px 10px;
+                    border-radius: 20px;
+                    text-align: left;
+                    font-weight: 1000;
+                    h3{
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 25px;
+                            @include breakpoint(sm) {
+                                font-size: 24px;
+                                line-height: 54px;
+                            }
+                        
+                        a{
+                            color: $theme-color;
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+}
+//*===== banner area start ====*//

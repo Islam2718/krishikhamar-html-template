@@ -1,0 +1,97 @@
+$bootstrap-sass-asset-helper: false !default;
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=greek");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("../../css/clanot-narrowbook-cufonfonts-webfont/style.css");
+@import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
+//
+// Variables
+// --------------------------------------------------
+//section 
+
+$common-padding:120px 0;
+// Colors
+$title-color: #242F46;
+$content-color: #586582;
+$title-color-trns: #EFF3FA;
+$theme-dark: #000B4B;
+$theme-dark2: #0A2465;
+$theme-middel: #1A4F91;
+$theme-middel2: #56CCF2;
+$theme-light: #3290D4;    
+$theme-light2: #3DADF2;    
+$desc-color: #828282;
+$hover-color: #fff;
+$theme-color: #30600A;
+$theme-trans: #FFF1F1;
+$theme-color-trans: #76A40510;
+$primary-color: #0d1d31;
+$primary-color2: #3DADF2;
+$primary-color3: #3DADF2;
+$blue-color3: #2B70F7;
+$blue-color3-bg: #EAF1FF;
+$purple-color: #B27AFA;
+$purple-color-trns: #F6EFFF;
+$border-color: #ececec;
+$white-color: #fff;
+$ash-color: #f4f9fd;
+$f2-color: #f2f2f2;
+$overlay:rgba(0,0,0,0.60);
+$dark-color:#f0f1f3;
+$section-bg: #f1f6f9;
+$text-color: #586582;
+$common-bg: linear-gradient(90deg, #ff406f, #ef7f7f);
+// social-media color
+$facebook: #1299F6;
+$twitter: #11C1FF;
+$linkedin: #0077B5;
+$skype: #2fb7df;
+$youtube: #FE0000;
+$pinterest: #BB001B;
+$camera: #e4405f;
+$instagram: -webkit-linear-gradient(135deg, #4D59C4 27.46%, #F7BB4D 52.57%, #E0456A 78.93%);
+$tumblr: #34465d;
+$behance: #1769ff;
+$star: #e9ba17;
+$green: #0be881;
+$green-h: #0fbcf9;
+$red: #f53b57;
+$yellow: #dec32b;
+$nell: #212fb4;
+$navy: #d8e0f3;
+$plaseholder: #C4C4C4;
+$topbartext: #BFD0D6;
+$shadow-theme: 0px 4px 15px rgba(241, 89, 89, 0.1);
+$shadow-blue: 0px 12px 21px rgba(55, 125, 255, 0.1);
+$border-radius-md: 17px;
+$border-radius-sm: 10px;
+$border-radius-av: 15px;
+$border-radius-lg: 23px;
+$focus: 0px 0px 0px 3px rgba(241, 89, 89, 0.2);
+//== Typography
+$btn-background: linear-gradient(96.04deg, #22663D 0%, #5FBB1A 95.56%);
+$btn-hover-background: linear-gradient(96.04deg, #5FBB1A 0%, #22663D 95.56%);
+$btn-background2: linear-gradient(96.04deg, #FFA22E 0%, #FF6A12 95.56%);;
+$btn-hover-background2: linear-gradient(96.04deg, #FF6A12 0%, #FFA22E 95.56%);;
+// transition
+$them-transition: all 0.2s ease-in-out;
+// font-family
+$Exo: 'Exo', sans-serif;
+$Monts: 'Montserrat', sans-serif;
+$Poppins: 'Poppins', sans-serif;
+// font-size
+$fs-small-x: 15px !default;
+$fs-base:   16px !default;
+$fs-h1:		100px;
+$fs-h2: 	60px;
+$fs-h3: 	34px;
+$fs-h4: 	20px;
+$fs-h5: 	18px;
+$fs-h6: 	16px;		
+
+$fs-body: 14px;
+$fs-header: 24px;
+$fs-small: 	12px;
+$fs-x-small: 10px;
+//  transition

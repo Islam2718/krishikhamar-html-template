@@ -1,0 +1,651 @@
+    //*======= header css start =====*//
+    .top-bar{
+        // position: relative;
+        // transform: scaleY(0);
+        // transition: all 0.3s ease-in-out;
+        // transform-origin: top;
+        // width: 100%;
+        // z-index: 1;
+        .navarea{
+            position: revert;
+        }
+        
+    }
+    .top-bar.fixed{
+        // position: fixed;
+        // transform: scaleY(1);
+        // width: 100%;
+        // z-index: 10;
+        // transform-origin: top;
+        // top: 0;
+
+    }
+    .navarea{
+        position: absolute;
+        width: 100%;
+        z-index: 5;
+        top: 40px;
+        header{
+            position: revert;
+            .menu-area{
+                background-color: white;
+                box-shadow: 0px 4px 30px 1px rgba(140, 198, 62, 0.1);
+                border-radius: 52px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 15px;
+                @include breakpoint (md){
+                    padding: 0 30px;
+                }
+                .menu-logo{
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    justify-self: left;
+                    a{
+                        text-decoration: none;
+                        display: flex;
+                        p{
+                            font-size: $fs-header;
+                            font-weight: 700;
+                            color: $title-color;
+                            letter-spacing: 1px;
+                            padding: 23px 0 0 20px;
+                            span{
+                                color: $theme-color;
+                            }
+                            display: none;
+                            @include breakpoint(sm){
+                                display: block;
+                            }
+                        }
+                    }
+                    
+                }
+                .main-menu{
+                    .overlay{
+                        height: 100vh;
+                        width: 100%;
+                        position: absolute;
+                        z-index: 9;
+                        background-color: $theme-light2;
+                        opacity: 0.3;
+                        display: block;
+                        top: -40px;
+                        left: 0;
+                        display: none;
+                    }
+                    .overlay.active{
+                        display: block;
+                    }
+                    @include breakpoint (min-xxl){
+                        .overlay{
+                            display: none;
+                        }
+                    }
+                    .menus{
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        .list-menu.open{
+                            left: 0;
+                            overflow-y: scroll;
+                        }
+                        .list-menu{
+                            position: absolute;
+                            top: -40px;
+                            background: $btn-background;
+                            width: 280px;
+                            text-align: left;
+                            height: 100vh;
+                            padding: 0;
+                            margin: 0;
+                            z-index: 10;
+                            left: -280px;
+                            transition: all 0.3s ease-in-out;
+                            .drop-list{
+                                list-style: none;
+                                cursor: pointer;
+                                font-size: $fs-body;
+                                display: block;
+                                justify-content: space-between;
+                                padding: 12px 14px;
+                                position: relative;
+                                transition: all 0.3s ease-in-out;
+                                color: white;
+                                width: 100%;
+                                @include breakpoint(min-xxl){
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: auto;
+                                }
+                                &:nth-child(2){
+                                    &:hover{
+                                        &::after{
+                                        display: block;
+                                        content: '';
+                                        height: 8px;
+                                        width: 8px;
+                                        border-bottom: 1.5px solid white;
+                                        border-right: 1.5px solid white;
+                                        margin: 8px 10px;
+                                        transform: rotate(-135deg);
+                                        transition: all 0.3s ease-in-out;
+                                        }
+                                        .down-menu1{    
+                                            top: 30px;
+                                            left: 0px;
+                                            width: 260px !important;
+                                            height: 100%;
+                                            transition: all 0.3s ease-in-out;
+                                            transform: scaley(1);
+                                            border: 0px solid $title-color;
+                                            @include breakpoint(min-xxl){
+                                                border: 2px solid $theme-color;                                            
+                                            }
+                                            ul{
+                                                color: $theme-light2;
+                                                padding: 0px;
+                                                @include breakpoint(min-xxl){
+                                                    padding-left: 2rem;
+                                                }
+                                                li{
+                                                    height: auto;
+                                                    padding: 5px 0 10px 0;
+                                                    margin: 5px 0;
+                                                    background-color: #4da125;
+                                                    @include breakpoint(min-xxl){
+                                                        background-color: transparent;
+                                                    }
+                                                    a{
+                                                        color: white;
+                                                        font-size: $fs-body;
+                                                        span{
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            @include breakpoint(min-xxl){
+                                                top: 30px;
+                                                left: -107px !important;
+                                                width: 326px !important;
+                                                bottom: 20px;
+                                                height: auto;
+                                                transform: scaley(1);
+                                                transform-origin: top;
+                                                box-shadow: -5px 54px 81px 2px transparent;
+                                                transition: all 0.3s ease-in;
+                                                color: white; 
+                                            }
+                                            @include breakpoint (min-xxl){
+                                            }
+                                            .drop-aling{
+                                                display: block;
+                                                @include breakpoint (min-xxl){
+                                                    display: flex;
+                                                    ul.design-drop{
+                                                        padding: 10px;
+                                                        color: $theme-dark;
+                                                        cursor: auto;
+                                                        width: calc(656px / 2);
+                                                        font-weight: 500;
+                                                        span{
+                                                            padding-left: 10px;
+                                                        }
+                                                        li{
+                                                            min-height: auto;
+                                                            padding: 6px 15px 6px 5px;
+                                                            border-left: 5px solid transparent;
+                                                            margin: 5px 0;
+                                                            font-weight: 300;
+                                                            line-height: 20px;
+                                                            font-size: $fs-body;
+                                                            color: $theme-dark;
+                                                            &:hover{
+                                                                background-color: $theme-color-trans;
+                                                                border-left: 5px solid transparent;
+                                                                a{
+                                                                    color: $theme-dark;
+                                                                }
+                                                            }
+                                                            a{
+                                                                line-height: 20px;
+                                                                font-weight: 500;
+                                                                color: #636990;
+                                                                span{
+                                                                    color: $theme-dark;
+                                                                    font-size: 15px;
+                                                                    font-weight: 300;
+                                                                    display: block;
+                                                                    padding-left: 0px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    
+                                                    ul.groth-drop{
+                                                        padding: 10px;
+                                                        color: $theme-dark;
+                                                        cursor: auto;
+                                                        width: calc(656px / 2);
+                                                        font-weight: 500;
+                                                        span{
+                                                            padding-left: 10px;
+                                                        }
+                                                        li{
+                                                            min-height: auto;
+                                                            padding: 6px 15px 6px 5px;
+                                                            border-left: 5px solid transparent;
+                                                            font-weight: 305px 0;
+                                                            line-height: 20px;
+                                                            font-size: $fs-body;
+                                                            margin: 5px 0;
+                                                            &:hover{
+                                                                background-color: $theme-color-trans;
+                                                                border-left: 5px solid transparent;
+                                                                a{
+                                                                    color: $theme-dark;
+                                                                }
+                                                            }
+                                                            a{
+                                                                line-height: 20px;
+                                                                font-weight: 500;
+                                                                color: #636990;
+                                                                span{
+                                                                    font-size: $fs-body;
+                                                                    font-weight: 300;
+                                                                    display: block;
+                                                                    padding-left: 0px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    
+                                    }
+                                }
+                                &:nth-child(6){
+                                    &:hover{
+                                        &::after{
+                                        display: block;
+                                        content: '';
+                                        height: 8px;
+                                        width: 8px;
+                                        border-bottom: 1.5px solid white;
+                                        border-right: 1.5px solid white;
+                                        margin: 8px 10px;
+                                        transform: rotate(-135deg);
+                                        transition: all 0.3s ease-in-out;
+                                        }
+                                        .down-menu2{
+                                            top: 30px;
+                                            left: 0px;
+                                            width: 260px;
+                                            height: 100%;
+                                            transition: all 0.3s ease-in-out;
+                                            transform: scaley(1);
+                                            transform-origin: top;
+                                            padding: 0 0px 10px 0;
+
+                                            ul{
+                                                color: $theme-light2;
+                                                padding: 0;
+                                                li{
+                                                    height: auto;
+                                                    padding: 5px 0px 7px 12px;
+                                                    margin: 5px 0;
+                                                    background-color: #4da125;
+                                                    @include breakpoint(min-xxl){
+                                                        background-color: transparent;
+                                                    }
+                                                    a{
+                                                        color: white;
+                                                        font-size: $fs-body;
+                                                        span{
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            @include breakpoint(min-xxl){
+                                                top: 30px;
+                                                left: -55px ;
+                                                width: 232px ;
+                                                bottom: 20px;
+                                                height: auto;
+                                                transform: scaley(1);
+                                                transform-origin: top;
+                                                box-shadow: -5px 54px 81px 2px transparent;
+                                                transition: all 0.3s ease-in;
+                                                color: white; 
+                                            }
+                                            @include breakpoint (min-xxl){
+                                                
+                                            }
+                                            .drop-aling{
+                                                display: block;
+                                                @include breakpoint (min-xxl){
+                                                    display: flex;
+                                                    ul.design-drop{
+                                                        padding: 12px 0;
+                                                        color: $theme-dark;
+                                                        cursor: auto;
+                                                        font-weight: 500;
+                                                        li{
+                                                            min-height: auto;
+                                                            padding: 6px 15px 6px 5px;
+                                                            border-left: 5px solid transparent;
+                                                            margin: 5px 0;
+                                                            font-weight: 300;
+                                                            line-height: 20px;
+                                                            font-size: $fs-body;
+                                                            color: $theme-dark;
+                                                            &:hover{
+                                                                background-color: $theme-color-trans;
+                                                                border-left: 5px solid transparent;
+                                                                a{
+                                                                    color: $theme-dark;
+                                                                }
+                                                            }
+                                                            a{
+                                                                line-height: 20px;
+                                                                font-weight: 500;
+                                                                color: #636990;
+                                                                span{
+                                                                    color: $theme-dark;
+                                                                    font-size: 15px;
+                                                                    font-weight: 300;
+                                                                    display: block;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    
+                                                }
+                                            }
+                                        }
+                                    
+                                    }
+                                }
+                            
+                                &::after{
+                                    display: block;
+                                    content: '';
+                                    height: 8px;
+                                    width: 8px;
+                                    border-bottom: 1.5px solid white;
+                                    border-right: 1.5px solid white;
+                                    margin: 5px 10px;
+                                    padding: 5px;
+                                    transform: rotate(45deg);
+                                    transition: all 0.3s ease-in-out;
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 5px;
+                                    @include breakpoint (min-xxl){
+                                        padding: 0x;
+                                        position: relative;
+                                        top: 2px;
+                                    }
+                                }
+                                .down-menu1{
+                                    width: auto;
+                                    background-color: transparent;
+                                    box-sizing: border-box;
+                                    position: relative;
+                                    top: 0px;
+                                    border-radius: 10px;
+                                    height: 0px;
+                                    width: 326px !important;
+                                    transform: scaley(0);
+                                    text-align: left;
+                                    transform-origin: top;
+                                    transition: all 0.3 ease-in-out;
+                                    padding: 0px 0px;
+                                    .drop-aling{
+                                        display: block;
+                                        @include breakpoint (min-xxl){
+                                            display: flex;
+                                            ul{
+                                                padding: 10px;
+                                                margin: 0;
+                                                width: calc(400px / 3);
+                                            }
+                                        }
+                                    }
+                                    li{
+                                        padding: 0px;
+                                        list-style: none;
+                                        a{
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                                .down-menu2{
+                                    box-sizing: border-box;
+                                    position: relative;
+                                    height: 0px;
+                                    width: 150px;
+                                    border-radius: 10px;
+                                    top: 0px;
+                                    transform: scaley(0);
+                                    transform-origin: top;
+                                    transition: all 0.3 ease-in-out;
+                                    
+                                    @include breakpoint (min-xxl){
+                                        width: auto !important;
+                                    }
+                                    li{
+                                        list-style: none;
+                                        a{
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                            }
+                            .normal-list{
+                                list-style: none;
+                                padding: 10px 15px;
+                                a{
+                                    color: $theme-dark2;
+                                    font-size: $fs-body;
+                                    color: white;
+                                    text-decoration: none;
+                                }
+                                
+                            }
+                            @include breakpoint (min-xxl){
+                                display: flex;
+                                flex-wrap: wrap;
+                                align-items: center;
+                                color: $theme-dark;
+                                position: relative;
+                                background-color: transparent; 
+                                background-image: linear-gradient( transparent);
+                                width: auto;
+                                height: auto;
+                                margin: 0;
+                                padding: 0;
+                                left: 0;
+                                top: 0;
+                                .drop-list{
+                                    list-style: none;
+                                    cursor: pointer;
+                                    font-size: $fs-body;
+                                    display: flex;
+                                    padding: 12px 20px;
+                                    position: relative;
+                                    color: $theme-dark;
+                                    list-style: none;
+                                    &:nth-child(2){
+                                        &:hover{
+                                            &::after{
+                                            display: block;
+                                            content: '';
+                                            height: 8px;
+                                            width: 8px;
+                                            border-bottom: 1.5px solid $theme-dark;
+                                            border-right: 1.5px solid $theme-dark;
+                                            margin: 8px 10px;
+                                            transform: rotate(-135deg);
+                                            transition: all 0.3s ease-in-out;
+                                            }
+                                            .down-menu1{
+                                                top: 50px;
+                                                left: 0;
+                                                bottom: auto;
+                                                border-radius: 10px;
+                                                padding: 10px;
+                                                transform: scaley(1);
+                                                transition: all 0.3s ease-in;
+                                                box-shadow: 0px 4px 15px rgba(241, 89, 89, 0.1);
+                                                border: 2px solid $theme-color;
+                                                li{
+                                                    height: auto;
+                                                    list-style: none;
+                                                    a{
+                                                        color: $theme-dark2;
+                                                        text-decoration: none;
+                                                    }
+                                                } 
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(6){
+                                        &:hover{
+                                            &::after{
+                                            display: block;
+                                            content: '';
+                                            height: 8px;
+                                            width: 8px;
+                                            border-bottom: 1.5px solid $theme-dark;
+                                            border-right: 1.5px solid $theme-dark;
+                                            margin: 8px 10px;
+                                            transform: rotate(-135deg);
+                                            transition: all 0.3s ease-in-out;
+                                            }
+                                            .down-menu2{
+                                                top: 50px;
+                                                left: 0;
+                                                bottom: auto;
+                                                border-radius: 10px;
+                                                padding: 10px;
+                                                transform: scaley(1);
+                                                transition: all 0.3s ease-in;
+                                                box-shadow: 0px 4px 15px rgba(241, 89, 89, 0.1);
+                                                border: 2px solid $theme-color;
+                                                li{
+                                                    height: auto;
+                                                    list-style: none;
+                                                    a{
+                                                        box-shadow: -1px 113px 60px 2px rgba(232,229,232,1);
+                                                        color: $theme-dark2;
+                                                        text-decoration: none;
+                                                    }
+                                                } 
+                                            }
+                                        
+                                        }
+                                    }
+                                
+                                    &::after{
+                                        display: block;
+                                        content: '';
+                                        height: 8px;
+                                        width: 8px;
+                                        border-bottom: 1.5px solid $theme-dark;
+                                        border-right: 1.5px solid $theme-dark;
+                                        margin: 5px 10px;
+                                        padding: 5px;
+                                        transform: rotate(45deg);
+                                        transition: all 0.3s ease-in-out;
+                                        @include breakpoint(min-xxl){
+                                            padding: 0px;
+                                        }
+                                    }
+                                    .down-menu1{
+                                        width: 150px;
+                                        background-color: white;
+                                        box-sizing: border-box;
+                                        position: absolute;
+                                        top: 50px;
+                                        transform: scaley(0);
+                                        transform-origin: top;
+                                        transition: all 0.3 ease-in-out;
+                                        padding: 10px;
+                                        
+                                        li{
+                                            padding: 0px;
+                                        }
+                                    }
+                                    .down-menu2{
+                                        width: 150px;
+                                        height: auto;
+                                        background-color: white;
+                                        box-sizing: border-box;
+                                        position: absolute;
+                                        top: 50px;
+                                        transform: scaley(0);
+                                        transform-origin: top;
+                                        transition: all 0.3 ease-in-out;
+                                        padding: 10px;
+                                    }
+                                }
+                                .normal-list{
+                                    list-style: none;
+                                    padding: 30px 20px;
+                                    transition: $them-transition;
+                                        &:hover {
+                                            background: #f7f7f7;
+                                            padding: 8px 20px;
+                                            border-radius: 20px;
+                                        }
+                                    a{
+                                        color: $theme-dark2;
+                                        text-decoration: none;
+                                        
+                                    }
+                                    
+                                }
+                            }
+                        
+                        }
+                        .menu-bar{
+                            @include breakpoint (max-xxl){
+                                div{
+                                    height: 2px;
+                                    width: 20px;
+                                    background-color: black;
+                                    cursor: pointer;
+                                    &:nth-child(2){
+                                        margin: 5px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn-cart-area{
+                    position: relative;
+                                    span{
+                        position: absolute;
+                        padding: 2px 7px;
+                        font-size: 11px;
+                        color: white;
+                        background-color: $theme-color;
+                        border-radius: 50%;
+                        top: -15px;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+        
+
+    //*======= header css ends  =====*//

@@ -1,0 +1,23 @@
+//@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+// Core variables and mixins
+@import "sub-stylesheet/_variables";
+@import "sub-stylesheet/_mixins";
+
+// sweet alert 
+//@import "../../node_modules/sweetalert2/src/sweetalert2.scss";
+// sweet alert 
+//@import "../../node_modules/swiper/swiper.scss";
+// animation css
+//@import "../../node_modules/animate-scss/animate.scss";
+
+// Core CSS
+@import "sub-stylesheet/_global";
+@import "sub-stylesheet/_header";
+@import "sub-stylesheet/_banner";
+@import "sub-stylesheet/_main";
+
+
+// Components
